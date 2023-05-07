@@ -20,7 +20,6 @@ toggle_btn.addEventListener('click', function () {
     toogle_title.style.fontFamily = "";
     cadre1.style.backgroundImage = 'url("./photoDeProfil.png")';
     document.documentElement.classList.remove('flashlight');
-    document.body.style.overflowX = 'auto'; // Activer le scroll horizontal
   } else {
     body.classList.add(dark_theme_class);
     toogle_title.style.color = "rgb(255, 117, 24)";
@@ -29,7 +28,6 @@ toggle_btn.addEventListener('click', function () {
     toogle_titleautre.style.fontFamily = "'Creepster', cursive";
     cadre1.style.backgroundImage = 'url("./photoDark.png")';
     document.documentElement.classList.add('flashlight');
-    document.body.style.overflowX = 'hidden'; // Désactiver le scroll horizontal
   }
 });
 
