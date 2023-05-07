@@ -40,9 +40,32 @@ header nav ul li:hover a {
   justify-content: space-between;
   margin-top: 5rem;
 }
-.Container1 img {
-  max-width: 80%;
-  margin-left: 2rem;
+
+.photo {
+  position: relative;
+}
+
+.cadre1 {
+  height: 20rem;
+  width: 20rem;
+  background-color: blue;
+  z-index: 1;
+  position: absolute;
+  margin: -1rem;
+  transition: all 0.5s ease-in-out;
+  background-image: url("./photoDeProfil.png");
+  background-size: cover;
+}
+
+.cadre1:hover {
+  margin: -5rem;
+}
+
+.cadre2 {
+  height: 20rem;
+  width: 20rem;
+  background-color: #1076ff;
+  z-index: 2;
 }
 
 .Container1 h1 {
@@ -197,7 +220,7 @@ footer p {
 
 
 /* Media Queries */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   header img {
     height: 2rem;
   }
@@ -206,10 +229,20 @@ footer p {
     flex-direction: column;
     text-align: center;
   }
-  .Container1 img {
-    max-width: 50%;
-    margin-left: 0;
+
+  .photo {
+    margin: 6rem auto 0rem auto;
   }
+  .cadre1 {
+    height: 10rem;
+    width: 10rem;
+    
+  }
+  .cadre2 {
+    height: 10rem;
+    width: 10rem;
+  }
+
   .Container1 h1 {
     font-size: 1.5rem;
   }
@@ -280,6 +313,7 @@ footer p {
 }
 
 @media screen and (max-width: 380px) {
+
   header img {
     height: 1.5rem;
   }
@@ -288,10 +322,11 @@ footer p {
     flex-direction: column;
     text-align: center;
   }
-  .Container1 img {
-    max-width: 50%;
-    margin-left: 0;
+
+  .cadre1 {
+    margin: -3rem;
   }
+
   .Container1 h1 {
     font-size: 1.5rem;
   }
