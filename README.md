@@ -21,7 +21,3 @@ Une fois cloné, ouvrez le fichier index.html dans votre navigateur pour visuali
 ## Contribution
 
 Si vous souhaitez contribuer à ce projet, veuillez soumettre une demande de tirage en utilisant la section "Issues" de ce dépôt. Je suis toujours ouvert à de nouvelles idées et à des améliorations pour ce portfolio.
-
-## Licence
-
-Ce projet est publié sous la licence MIT. Pour plus d'informations, consultez le fichier LICENSE dans ce dépôt.
