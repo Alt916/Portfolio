@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Benoit.D.C.Gaillard</title>
   </head>
-  <body>
+  <body class="light">
     <header>
       <div class="group-bulle">
         <div class="bulle1"></div>
@@ -19,15 +19,16 @@
       </div>
       <nav>
         <ul>
-          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./index.html" class="h1">Accueil</a></li>
+          <button id="theme-btn">Changer de theme</button>
         </ul>
       </nav>
     </header>
     <div class="Container1">
       <div class="intro">
         <h1>Benoit GAILLARD</h1>
-        <h2>
-          DÉVELOPEUR <br />
+        <h2 class="h2">
+          DÉVELOPPEUR <br />
           Front-End
         </h2>
         <p>Je vais programmer et développer des sites, des applications, et des plates-formes Web pour vous.</p>
@@ -39,7 +40,7 @@
         </div>
       </div>
       <div class="photo">
-        <div class="cadre1"></div>
+        <div class="cadre1" id="cadre1"></div>
         <div class="cadre2"></div>
       </div>
     </div>
@@ -165,5 +166,6 @@
         Il a été réalisé par Benoit Gaillard.
       </p>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
