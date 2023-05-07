@@ -13,8 +13,35 @@ header {
   margin-bottom: 0rem;
 }
 
-header img {
-  max-width: 5%;
+header .group-bulle {
+  display: flex;
+  align-items: center;
+}
+
+header .bulle1 {
+  background-color: #1076ff;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: -0.3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+header .bulle1:hover {
+  background-color: #1076ff;
+  margin: 0 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header .bulle2 {
+  background-color: blue;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+header .bulle2:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
@@ -28,11 +55,23 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: all 0.5s ease-in-out;
 }
 
-header nav ul li:hover a {
-  border-bottom: 2px solid blue;
+header nav ul li:hover a::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: blue;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .Container1 {
@@ -52,9 +91,10 @@ header nav ul li:hover a {
   z-index: 1;
   position: absolute;
   margin: -1rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   background-image: url("./photoDeProfil.png");
   background-size: cover;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5)
 }
 
 .cadre1:hover {
@@ -66,6 +106,10 @@ header nav ul li:hover a {
   width: 20rem;
   background-color: #1076ff;
   z-index: 2;
+}
+
+.cadre2:hover {
+  background-color: #333;
 }
 
 .Container1 h1 {
@@ -221,8 +265,19 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 800px) {
-  header img {
+
+  header nav li a {
+    font-size: 1rem;
+  }
+
+  header .bulle1 {
     height: 2rem;
+    width: 2rem;
+  }
+
+  header .bulle2 {
+    height: 2rem;
+    width: 2rem;
   }
   
   .Container1 {
@@ -287,16 +342,18 @@ footer p {
     justify-items: center;
   }
   .siteBlock {
-    height: 10rem;
+    height: 5rem;
   }
   .siteBlock a {
     display: flex;
     flex-direction: column;
     width: 10rem;
+    height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     border-radius: 5px;
   }
+
   .siteBlock a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -314,8 +371,18 @@ footer p {
 
 @media screen and (max-width: 380px) {
 
-  header img {
-    height: 1.5rem;
+  header .bulle1 {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  header .bulle2 {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  header nav li a {
+    font-size: 0.7rem;
   }
   
   .Container1 {
