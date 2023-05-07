@@ -43,11 +43,3 @@ function update(e){
 
 document.addEventListener('mousemove',update)
 document.addEventListener('touchmove',update)
-
-window.addEventListener('scroll', function(e) {
-  // Vérifiez si le scroll horizontal est différent de zéro
-  if (window.scrollX !== 0) {
-    // Si c'est le cas, réglez-le à zéro
-    window.scrollTo(0, window.scrollY);
-  }
-});
