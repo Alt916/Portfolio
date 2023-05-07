@@ -382,6 +382,7 @@ footer p {
   }
   .siteBlock {
     height: 5rem;
+    margin: 4rem;
   }
   .siteBlock a {
     display: flex;
@@ -389,7 +390,7 @@ footer p {
     width: 10rem;
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 5px;
   }
 
@@ -478,6 +479,7 @@ footer p {
   }
   .siteBlock {
     height: 10rem;
+    margin: 1rem;
   }
   .siteBlock a {
     display: flex;
