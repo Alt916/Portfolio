@@ -22,8 +22,6 @@
   )
 }
 
-
-
 body {
   padding: 5%;
 }
@@ -292,6 +290,21 @@ footer p {
   margin-top: 5rem;
   color: rgb(122, 121, 121);
   font-size: small;
+}
+
+.button-linkedin {
+  display: flex;
+  background-color: #1076ff;
+  width: 3rem;
+  align-items: center;
+  margin: 0 auto;
+}
+.button-linkedin button {
+  background-color: #1076ff;
+  border: 1px solid #1076ff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .formulaire {
