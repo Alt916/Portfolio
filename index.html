@@ -5,41 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/247ee0e307.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./BlackonTransparent.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/247ee0e307.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Benoit.D.C.Gaillard</title>
   </head>
   <body class="light">
     <header>
-      <div class="group-bulle">
-        <div class="bulle1"></div>
-        <div class="bulle2"></div>
+      <div class="chat-container">
+        <form id="chat-form" class="chat-form">
+          <input type="text" id="message" placeholder="Entrer votre message" />
+          <button class="button-top" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+        </form>
       </div>
-      <nav>
-        <ul>
-          <li><a href="./index.html" class="h1">Accueil</a></li>
-          <li><a href="./conctact.html" class="h1">Contact</a></li>
-          <button id="theme-btn">Changer de thème</button>
-        </ul>
-      </nav>
+      <div class="chat-container">
+        <div class="chatbox" id="chatbox"></div>
+      </div>
     </header>
     <div class="Container1">
       <div class="intro">
         <h1>Benoit GAILLARD</h1>
-        <h2 class="h2">
-          DÉVELOPPEUR <br />
-          Front-End
-        </h2>
+        <h2 class="h2">DÉVELOPPEUR <br /></h2>
         <p>Je vais programmer et développer des sites, des applications, et des plates-formes Web pour vous.</p>
-        <div class="button">
-          <a href="./conctact.html">
-          <button>CONTACTER MOI</button>
-          <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i>
+        <a href="mailto:gaillard.benoit10@icloud.com" style="text-decoration: none; cursor: pointer">
+          <button class="neumorphic-button"><i class="fa-solid fa-envelope"></i>CONTACTER MOI</button>
         </a>
-        </div>
       </div>
       <div class="photo">
         <div class="cadre1" id="cadre1"></div>
@@ -48,7 +40,7 @@
     </div>
     <div class="Container2">
       <div class="skills">
-        <h2>Information Personnelles</h2>
+        <h2>Informations Personnelles</h2>
         <ul>
           <li>Benoit Gaillard</li>
           <li>09/10/1997</li>
@@ -108,70 +100,244 @@
       </div>
     </div>
     <div class="Container3">
-      <h2>Compétences</h2>
-      <p>Je peut vous aider avec mes compétences. Que souhaitez-vous savoir exactement ?</p>
-      <div class="quadrillage">
-        <div class="cadre">
-          <h3>Compétences Web</h3>
-          <p>Maitrise du HTML/CSS/SASS/JS/REACT.</p>
+      <div class="bloc" id="webBloc1">
+        <div class="icon">
+          <i class="fa-solid fa-globe" style="color: #000000"></i>
         </div>
-        <div class="cadre">
-          <h3>Sécurité express</h3>
-          <p>Utilisation de BCRYPT/DOTENV/Express.</p>
+        <h3>Web</h3>
+        <div class="overlay" id="webOverlay1">
+          <div class="glassmodal">
+            <h3>Mes compétences Front End</h3>
+            <div class="skill-container">
+              <h4>HTML</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+
+              <h4>CSS</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+
+              <h4>JavaScript</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+              </div>
+
+              <h4>React</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 50%"></div>
+              </div>
+
+              <h4>Sass</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+
+              <h4>TypeScript</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 10%"></div>
+              </div>
+
+              <h4>Tailwind CSS</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 20%"></div>
+              </div>
+            </div>
+            <button class="close">Fermer</button>
+          </div>
         </div>
-        <div class="cadre">
-          <h3>Service Clientèle</h3>
-          <p>Accueillir, Conseiller, Renseigner un client.</p>
+      </div>
+      <div class="bloc" id="mobileBloc">
+        <div class="icon">
+          <i class="fa-solid fa-lock" style="color: #000000"></i>
         </div>
-        <div class="cadre">
-          <h3>Prospects enregistrés</h3>
-          <p>Enregistrer des coordonnées de prospects.</p>
+        <h3>Sécurité</h3>
+        <div class="overlay" id="mobileOverlay">
+          <div class="glassmodal">
+            <h3>Les sécurité à ma connaissance</h3>
+            <div class="skill-container">
+              <h4>BCRYPT</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+
+              <h4>Express</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+              </div>
+            </div>
+            <button class="close">Fermer</button>
+          </div>
+          <h4>Node</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
         </div>
-        <div class="cadre">
-          <h3>Caractéristiques Techniques</h3>
-          <p>Présenter les caractéristiques techniques d'un produit.</p>
+      </div>
+      <div class="bloc" id="softwareBloc">
+        <div class="icon">
+          <i class="fa-solid fa-laptop-code" style="color: #000000"></i>
         </div>
-        <div class="cadre">
-          <h3>Compétences pack Office</h3>
-          <p>Utilisation de Word, Excel, Powerpoint.</p>
+        <h3>Logiciel</h3>
+        <div class="overlay" id="softwareOverlay">
+          <div class="glassmodal">
+            <h3>Logiciel maitriser</h3>
+            <div class="skill-container">
+              <h4>Visual Studio Code</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+
+              <h4>XCode</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 10%"></div>
+              </div>
+
+              <h4>Postman</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+
+              <h4>Navigateur Internet</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+
+              <h4>Logiciel bureautique</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+
+              <h4>Terminal</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+              </div>
+
+              <h4>MacOs / IOS / WatchOS / IpadOs</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+            </div>
+            <button class="close">Fermer</button>
+          </div>
+        </div>
+      </div>
+      <div class="bloc" id="qualityBloc">
+        <div class="icon">
+          <i class="fa-solid fa-server" style="color: #000000"></i>
+        </div>
+        <h3>Qualité</h3>
+        <div class="overlay" id="qualityOverlay">
+          <div class="glassmodal">
+            <h3>Mes qualités</h3>
+            <div class="skill-container">
+              <h4>Résolution de problèmes</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+
+              <h4>Curiosité et apprentissage continu</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+
+              <h4>Collaboration et travail d'équipe</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+
+              <h4>Attention aux détails</h4>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <button class="close">Fermer</button>
+          </div>
         </div>
       </div>
     </div>
     <div class="Container4">
-      <h2>Projet réalisé</h2>
-      <p>Voici quelques projets que j'ai réalisé.</p>
-      <div class="quadrillage2">
-        <div class="siteBlock">
+      <h2>Mes sites et plateformes développés</h2>
+      <div class="glassmodal2-wrapper">
+        <div class="glassmodal2">
           <a href="https://unknown7349.github.io/P2-Booki/">
-            <img src="./Logo-3.png" alt="Logo de Booki écrit en bleu" />
-            <button>Visiter</button>
+            <div class="photoSite">
+              <img src="./booki.png" alt="Site Booki" />
+            </div>
           </a>
+          <div class="titrephoto">
+            <h3>Booki</h3>
+          </div>
         </div>
-        <div class="siteBlock">
+        <div class="glassmodal2">
           <a href="https://unknown7349.github.io/P3---Benoit-GAILLARD/">
-            <img src="./ohmyfood.png" alt="Logo de ohmyfood, écriture en noir" />
-            <button>Visiter</button>
+            <div class="photoSite">
+              <img src="./ohmyfood.png" alt="Site 2" />
+            </div>
           </a>
+          <div class="titrephoto">
+            <h3>Oh my food</h3>
+          </div>
         </div>
-        <div class="siteBlock">
+        <div class="glassmodal2">
           <a href="https://unknown7349.github.io/P7/">
-            <img src="./kasa.png" alt="Logo de Kasa, écriture en rouge" />
-            <button>Visiter</button>
+            <div class="photoSite">
+              <img src="./kasa.png" alt="Site 3" />
+            </div>
           </a>
+          <div class="titrephoto">
+            <h3>Kasa</h3>
+          </div>
+        </div>
+        <div class="glassmodal2">
+          <a href="https://unknown7349.github.io/Portfolio/">
+            <div class="photoSite">
+              <img src="./ancienportfolio.png" alt="Site 4" />
+            </div>
+          </a>
+          <div class="titrephoto">
+            <h3>Ancien Portfolio</h3>
+          </div>
+        </div>
+        <div class="glassmodal2">
+          <a href="https://unknown7349.github.io/Nova/">
+            <div class="photoSite">
+              <img src="./nova.png" alt="Site 5" />
+            </div>
+          </a>
+          <div class="titrephoto">
+            <h3>Nova</h3>
+          </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="button-linkedin">
-      <a href="https://www.linkedin.com/in/benoit-gaillard-9a7483230/">
-        <button>
-          <i class="fa-brands fa-linkedin" style="color: #ffffff"></i>
-        </button>
+    <div class="Container5">
+      <h2>Suivez-moi sur les réseaux sociaux</h2>
+      <div class="socials">
+        <a href="https://www.facebook.com/benoit.gaillard.3998" class="social-icon">
+          <img src="facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.linkedin.com/in/benoit-gaillard-9a7483230/" class="social-icon">
+          <img src="linkedin-in.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/unknown7349" class="social-icon">
+          <img src="github.svg" alt="GitHub" />
+        </a>
+        <a href="https://twitter.com/LoginErrorUser" class="social-icon">
+          <img src="twitter.svg" alt="Twitter" />
+        </a>
+        <a href="gaillard.benoit10@icloud.com" class="social-icon">
+          <img src="envelope-solid.svg" alt="Email" />
+        </a>
       </div>
-      <p>
-        Ce site ne collecte aucune donnée personnelle. <br />
-        Il a été réalisé par Benoit Gaillard.
-      </p>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p class="branding-text">&copy; 2023 <span class="brand-name">BENOIT GAILLARD</span>. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
     <script src="./index.js"></script>
   </body>

@@ -1,43 +1,88 @@
-var toggle_btn = document.getElementById('theme-btn');
-var body = document.getElementsByTagName('body')[0];
-var dark_theme_class = 'dark';
-var cadre1 = document.getElementById('cadre1');
+window.onload = function () {
+  var blocs = document.querySelectorAll(".bloc");
+  var overlays = document.querySelectorAll(".overlay");
+  var closeButtons = document.querySelectorAll(".close");
 
-var toogle_title = document.querySelector('.h2');
-var toogle_titleautre = document.querySelector('.h1');
+  blocs.forEach(function (bloc, index) {
+    bloc.addEventListener("click", function () {
+      overlays[index].style.display = "flex";
+    });
+  });
 
-var font_link = document.createElement('link');
-font_link.href = 'https://fonts.googleapis.com/css2?family=Creepster&display=swap';
-font_link.rel = 'stylesheet';
-document.head.appendChild(font_link);
+  overlays.forEach(function (overlay, index) {
+    overlay.addEventListener("click", function (event) {
+      if (event.target == overlay) {
+        overlay.style.display = "none";
+      }
+    });
+  });
 
-toggle_btn.addEventListener('click', function () {
-  if (body.classList.contains(dark_theme_class)) {
-    body.classList.remove(dark_theme_class);
-    toogle_title.style.color = "";
-    toogle_titleautre.style.color = "";
-    toogle_titleautre.style.fontFamily = "";
-    toogle_title.style.fontFamily = "";
-    cadre1.style.backgroundImage = 'url("./photoDeProfil.png")';
-    document.documentElement.classList.remove('flashlight');
-  } else {
-    body.classList.add(dark_theme_class);
-    toogle_title.style.color = "rgb(255, 117, 24)";
-    toogle_titleautre.style.color = "rgb(255, 117, 24)";
-    toogle_title.style.fontFamily = "'Creepster', cursive";
-    toogle_titleautre.style.fontFamily = "'Creepster', cursive";
-    cadre1.style.backgroundImage = 'url("./photoDark.png")';
-    document.documentElement.classList.add('flashlight');
+  closeButtons.forEach(function (button, index) {
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      overlays[index].style.display = "none";
+    });
+  });
+
+  function addToChatbox(message, sender) {
+    const chatbox = document.getElementById("chatbox");
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message");
+
+    if (sender === "user") {
+      messageElement.classList.add("user-message");
+      messageElement.innerText = message;
+    } else {
+      messageElement.classList.add("bot-message");
+      const typingEffect = document.createElement("span");
+      typingEffect.classList.add("typing-effect");
+      messageElement.appendChild(typingEffect);
+      typeMessage(message, typingEffect);
+    }
+
+    chatbox.innerHTML = "";
+    chatbox.appendChild(messageElement);
+    document.querySelector(".chatbox").style.display = "block";
   }
-});
 
-function update(e){
-  var x = e.clientX || e.touches[0].clientX
-  var y = e.clientY || e.touches[0].clientY
+  function typeMessage(message, element, index = 0) {
+    if (index < message.length) {
+      element.innerHTML += message[index];
+      setTimeout(() => typeMessage(message, element, index + 1), 50);
+    }
+  }
 
-  document.documentElement.style.setProperty('--cursorX', x + 'px')
-  document.documentElement.style.setProperty('--cursorY', y + 'px')
-}
+  document.getElementById("chat-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const inputMessage = document.getElementById("message").value;
 
-document.addEventListener('mousemove',update)
-document.addEventListener('touchmove',update)
+    if (inputMessage) {
+      addToChatbox(inputMessage, "user");
+      handleUserMessage(inputMessage);
+      document.getElementById("message").value = "";
+      document.getElementById("botImage").classList.add("moveForward");
+    }
+  });
+
+  document.getElementById("botImage").addEventListener("animationend", function () {
+    this.classList.remove("moveForward");
+  });
+
+  function handleUserMessage(message) {
+    message = message.toLowerCase();
+
+    if (message.includes("bonjour") || message.includes("salut")) {
+      const response = "Bonjour ! Comment puis-je vous aider ?";
+      addToChatbox(response, "bot");
+    } else if (message.includes("quel est ton nom")) {
+      const response = "Je suis un chatbot créé par Benoit Gaillard.";
+      addToChatbox(response, "bot");
+    } else if (message.includes("aide") || message.includes("conseil")) {
+      const response = "Bien sûr, je suis là pour vous aider. Que voulez-vous savoir ?";
+      addToChatbox(response, "bot");
+    } else {
+      const response = "Je suis désolé, je ne comprends pas. En revanche, je peut vous rediriger vers Nova, le chatbot créer par Benoit Gaillard. Voici le lien : https://unknown7349.github.io/Nova/";
+      addToChatbox(response, "bot");
+    }
+  }
+};
