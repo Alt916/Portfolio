@@ -173,7 +173,7 @@ i.fa-solid.fa-envelope {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 40rem;
+  height: auto;
   margin-top: 10rem;
   border-radius: 15px;
   padding: 1rem;
@@ -343,6 +343,11 @@ button.close:hover {
 .Container4 {
   text-align: center;
   margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #e0e5ec;
 }
 
 .Container4 h2 {
@@ -352,7 +357,7 @@ button.close:hover {
 
 .Container4 p {
   color: rgb(122, 121, 121);
-  display: 1;
+  display: block; /* Corrigé ici */
   font-size: 2rem;
   margin: 0;
 }
@@ -472,3 +477,204 @@ footer {
   color: #888;
   font-size: 14px;
 }
+
+@media (max-width: 1366px) {
+
+  .Container2 {
+    padding: 0;
+  }
+
+  .Container2 .skills {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .Container2 h2 {
+    font-size: medium;
+    margin: 1rem 1rem;
+  }
+
+  .Container2 p {
+    font-size: small;
+  }
+
+  .Container3 {
+    margin: 5rem -4rem;
+  }
+
+  .bloc i {
+    width: 25rem;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .bloc i {
+    width: 20rem;
+  }
+  
+}
+
+@media (max-width: 900px) {
+
+  .Container2 {
+    flex-direction: column;
+  }
+
+  
+
+    .Container3 {
+      grid-template-columns: 1fr;
+    }
+  
+    .bloc {
+      width: 100%;
+    }
+  
+    .bloc i {
+      width: 30rem;
+      height: 10rem;
+    }
+  }
+
+@media (max-width: 800px) {
+
+  .Container1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Container1 h1 {
+    font-size: 2rem;
+  }
+
+  .Container1 p {
+    font-size: 1rem;
+  }
+
+  .Container1 button {
+    margin: 3rem auto;
+  } 
+  
+}
+
+@media (max-width: 768px) {
+
+  .bloc i {
+    width: 20rem;
+    height: 10rem;
+  }
+
+  .Container4 .glassmodal2-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Container4 .glassmodal2 {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .Container1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .Container1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .Container1 p {
+    font-size: 12px;
+  }
+
+  .Container1 button {
+    width: 14rem;
+  }
+
+  .Container1 .cadre1 {
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+  }
+
+  .Container2 {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .Container2 .skills {
+    padding: auto;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .Container2 ul {
+    padding: 0 1rem;
+  }
+
+  .Container2 .skills {
+    margin: 2rem 0;
+  }
+
+  .Container2 h2 {
+    font-size: medium;
+    margin: 1rem 1rem;
+  }
+
+  .Container2 p {
+    font-size: small;
+  }
+
+  .Container3 {
+    margin: 4rem 0rem;
+  }
+
+  .bloc i {
+    width: 15rem;
+    height: 10rem;
+  }
+
+.Container4 {
+    margin: 3rem 0rem;
+  }
+}
+
+  .Container4 .glassmodal2-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Container4 .glassmodal2 {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .Container5 {
+    padding: 0;
+  }
+
+  .socials {
+    margin: 1rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icon img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
